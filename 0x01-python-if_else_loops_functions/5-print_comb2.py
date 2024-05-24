@@ -5,7 +5,7 @@ for i in range(0, 100):
     elif i < 99:
         number = "{}, ".format(i)
     else:
-         number = "{}".format(i)
+        number = "{}".format(i)
     if i < 99:
         print(number, end='')
     else:
