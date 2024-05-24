@@ -6,7 +6,7 @@ def uppercase(str):
             capchr = "{}".format(chr(code-32))
         else:
             capchr = "{}".format(chr(code))
-        if i != len(str) - 1:
-            print(capchr, end='')
-        else:
+        if i == len(str) - 1 or str[i] == "":
             print(capchr)
+        else:
+            print(capchr, end='')
