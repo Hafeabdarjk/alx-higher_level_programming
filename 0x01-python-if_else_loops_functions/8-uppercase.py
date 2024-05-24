@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 def uppercase(str):
     for i in range(len(str)):
-        if chr(str[i]) > 96 and chr(str[i]) < 123:
-            capchr = "{}".format(ord(i-32))
+        code = ord(str[i])
+        if code > 96 and code < 123:
+            capchr = "{}".format(chr(code-32))
         else:
-            capchr = "{}".format(ord(i))
+            capchr = "{}".format(chr(code))
         if str[i] != str[-1]:
             print(capchr, end='')
         else:
