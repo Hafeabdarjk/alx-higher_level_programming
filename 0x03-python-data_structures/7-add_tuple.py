@@ -14,7 +14,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
         b2 = 0
     else:
         b1, b2 = tuple_b[0], tuple_b[1]
-    x = a1 + b1
-    z = a2 + b2
-    tuple_sum = (x, z)
+    tuple_sum = (a1 + b1, a2 + b2)
     return tuple_sum
