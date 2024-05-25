@@ -5,6 +5,6 @@ def no_c(my_string):
         if i == 'c' or "C":
             continue
         elif i == len(my_string) - 1:
-            print(i)
+            print(chrc)
         else:
-            print(i, end='')
+            print(chrc, end='')
