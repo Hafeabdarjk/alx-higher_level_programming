@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 def add(a, b):
-    a = 1
-    b = 2
-    return a + b
+    """My addition function
 
+    Args:
+        a: first integer
+        b: second integer
 
-def main():
-    pass
-if "{}".format(__name__) == "__main__":
-    main ()
+    Returns:
+        The return value. a + b
+    """
+    return (a + b)
