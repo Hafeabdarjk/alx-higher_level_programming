@@ -6,3 +6,6 @@ def divisible_by_2(my_list=[]):
             new_list.append(True)
         else:
             new_list.append(False)
+    return new_list
+my_list = [0, 1, 2, 3, 4, 5, 6]
+print(divisible_by_2(my_list))
