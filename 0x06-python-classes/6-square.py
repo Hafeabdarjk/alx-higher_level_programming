@@ -37,10 +37,7 @@ class Square:
     def size(self, new_position):
         zero = new_position[0]
         one = new_position[1]
-        if (not isinstance(new_position, tuple) or
-                len(new_position) != 2 or
-                not all(isinstance(num, int) for num in new_position) or
-                not all(num >= 0 for num in new_position)):
+        if not isinstance(new_position, tuple) or (zero < 0 or one < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = new_position
 
