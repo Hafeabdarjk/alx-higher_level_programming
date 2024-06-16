@@ -16,6 +16,7 @@ class Square:
         self.__position = position
 
      def __str__(self):
+        """This is str func."""
         self.my_print()
 
     @property
