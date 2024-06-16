@@ -32,18 +32,14 @@ Invalid Names
 first_name and last_name must be of typr str
 
 ::
->>> say_my_name(12, "White")
+>>> say_my_name(7.7, "White")
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
 ::
->>> say_my_name("Walter", 24)
+>>> say_my_name("Walter", ["White", "schrader", "Goodman"])
 Traceback (most recent call last):
 TypeError: last_name must be a string
-
- >>> say_my_name("Walter", ["White", "schrader", "Goodman"])
-    Traceback (most recent call last):
-    TypeError: last_name must be a string
 
 ::
 >>> say_my_name(None)
