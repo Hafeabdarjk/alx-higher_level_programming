@@ -15,22 +15,19 @@ class Square:
         self.__size = size
         self.__position = position
 
-    def __str__(self):
-        """This is str func."""
-        self.my_print()
-
     @property
     def size(self):
-        """Getter/Setter of size property."""
+        """Getter of size property."""
         return self.__size
 
     @property
     def position(self):
-        """Getter/Setter of position property."""
+        """Getter of position property."""
         return self.__position
 
     @size.setter
     def size(self, new_size):
+        """Setter of size property."""
         if not isinstance(new_size, int):
             raise TypeError("size must be an integer")
         elif new_size < 0:
@@ -39,6 +36,7 @@ class Square:
 
     @position.setter
     def position(self, new_position):
+        """Setter of position property."""
         zero = new_position[0]
         one = new_position[1]
         if (
