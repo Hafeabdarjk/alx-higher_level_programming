@@ -9,9 +9,10 @@ def matrix_divided(matrix, div):
         matrix (list of lists): should contain integers or float numbers
         div (int or float): the number that matrix elements are divided by
     """
-    if (not all((isinstance(x, (int, float))) for row in matrix for x in row) or
-            not isinstance(matrix, list) or matrix == [] or
-            not all(isinstance(row, list) for row in matrix)):
+    if (not isinstance(matrix, list) or matrix == [] or
+            not all(isinstance(row, list) for row in matrix) or
+            not all((isinstance(x, int) or isinstance(x, float))
+                    for x in [num for row in matrix for num in row])):
         raise TypeError("matrix must be a matrix (list of lists) of"
                         " integers/floats")
     if not all(len(row) == len(matrix[0]) for row in matrix):
@@ -20,4 +21,4 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    return [(x / round(div, 2)) for row in matrix for x in row]
+    return [(round((x / div), 2)) for row in matrix for x in row]
