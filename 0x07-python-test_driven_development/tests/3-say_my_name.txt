@@ -2,8 +2,8 @@
 How to Use 3-say_my_name.py
 ===========================
 
-This module defines a function for printing out namesbased on arguments passed.
-say_my_name(first_name, last_name="").
+This module defines a function for printing out namesbased on arguments passed
+"say_my_name(first_name, last_name="")".
 
 Usage
 =====
@@ -26,6 +26,9 @@ second argument is optional, default value = ""
 >>> say_my_name("Bob")
 My name is Bob 
 
+Invalid Names
+=============
+
 first_name and last_name must be of typr str
 
 ::
@@ -38,8 +41,12 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 TypeError: last_name must be a string
 
+ >>> say_my_name("Walter", ["White", "schrader", "Goodman"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
 ::
->>> say_my_name(None, "White")
+>>> say_my_name(None)
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
@@ -50,3 +57,11 @@ only "first_name must be a string" exeption is caught
 >>> say_my_name(12, 24)
 Traceback (most recent call last):
 TypeError: first_name must be a string
+
+At least one name must be provided.
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
