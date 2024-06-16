@@ -38,8 +38,6 @@ class Square:
     @position.setter
     def position(self, value):
         """Setter of position property."""
-        zero = value[0]
-        one = value[1]
         if (
             not isinstance(value, tuple) or
             len(value) != 2 or
@@ -55,7 +53,7 @@ class Square:
         Returns:
             int: the area of an instance.
         """
-        return self.__size ** 2
+        return (self.__size ** 2)
 
     def my_print(self):
         """prints the actual square in #s"""
@@ -66,3 +64,4 @@ class Square:
                 print("")
             for j in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
+            
