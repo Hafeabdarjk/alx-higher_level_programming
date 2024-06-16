@@ -31,7 +31,12 @@ first_name and last_name must be of typr str
 ::
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: first_name must be a 
+
+::
+>>> say_my_name("Walter", 24)
+Traceback (most recent call last):
+TypeError: last_name must be a string
 
 if both first_name and last_name were not of type str
 only "first_name must be a string" exeption is caught
