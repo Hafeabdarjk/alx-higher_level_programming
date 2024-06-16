@@ -26,27 +26,27 @@ class Square:
         return self.__position
 
     @size.setter
-    def size(self, new_size):
+    def size(self, value):
         """Setter of size property."""
-        if not isinstance(new_size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif new_size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = new_size
+        self.__size = value
 
     @position.setter
-    def position(self, new_position):
+    def position(self, value):
         """Setter of position property."""
-        zero = new_position[0]
-        one = new_position[1]
+        zero = value[0]
+        one = value[1]
         if (
-            not isinstance(new_position, tuple) or
-            len(new_position) != 2 or
-            not all(isinstance(num, int) for num in new_position) or
-            not all(num >= 0 for num in new_position)
+            not isinstance(value, tuple) or
+            len(value) != 2 or
+            not all(isinstance(num, int) for num in value) or
+            not all(num >= 0 for num in value)
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = new_position
+        self.__position = value
 
     def area(self):
         """Public instance method of the square class.
