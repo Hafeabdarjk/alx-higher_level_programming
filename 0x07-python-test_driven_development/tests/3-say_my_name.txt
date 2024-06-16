@@ -2,8 +2,8 @@
 How to Use 3-say_my_name.py
 ===========================
 
-This module defines a function for printing out names ""say_my_name
-(first_name, last_name="")"" based on arguments passed.
+This module defines a function for printing out namesbased on arguments passed.
+say_my_name(first_name, last_name="").
 
 Usage
 =====
