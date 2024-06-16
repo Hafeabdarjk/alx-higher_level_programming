@@ -1,0 +1,42 @@
+===========================
+How to Use 3-say_my_name.py
+===========================
+
+This module defines a function for printing out names ""say_my_name
+(first_name, last_name="")"" based on arguments passed.
+
+Usage
+=====
+
+``say_my_name(...)`` prints out a full sentance "My name is <first name> 
+<last name>" based on arguments.
+
+::
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+::
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+second argument is optional, default value = ""
+
+::
+>>> say_my_name("Bob")
+My name is Bob 
+
+first_name and last_name must be of typr str
+
+::
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+if both first_name and last_name were not of type str
+only "first_name must be a string" exeption is caught
+
+::
+>>> say_my_name(12, 24)
+Traceback (most recent call last):
+TypeError: first_name must be a string
